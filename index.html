@@ -6,55 +6,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Котоопрос</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/style.css">
     <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/1446/PNG/512/22264pawprints_98821.png" type="png">
 </head>
 
 <body>
-    <h1>Анкета для владельцев кошек</h1>
-    <form action="#" method="#">
-        <fieldset>
-            <legend><b>Основная информация</b></legend>
-            <p> 
-                <label for="cname">Кличка Вашего питомца:</label>
-                <input type="text" name="catsname" id="cname"/> 
-            </p>
-            <p> 
-                <label for="yname">Ваше имя:</label>
-                <input type="text" name="yourname" id="yname"/> 
-            </p>
-            <p> 
-                <label for="phone">Контактный номер телефона:</label>
-                <input type="text" name="contacts" id="phone"/> 
-            </p>
-        </fieldset>
-        <p> <label for="bred">Выберите породу питомца:</labe>
-        </p>
-        <select multiple id="bred">
-            <option value="multibred">Дворняга</option>
-            <option value="siamese">Сиамская</option>
-            <option value="scottish">Шотландская вислоухая</option>
-            <option value="brittish">Британская короткошерстная</option>
-            <option value="persian">Персидская</option>
-            <option value="other" selected="selected">Другое</option>
-        </select>
+    <main class="main">
+        <form action="#" method="#" class="main__form">
+            <h1>Анкета для владельцев кошек</h1>
+            <fieldset>
+                <legend>Основная информация</legend>
 
-        <p>Укажите, чем питается Ваш питомец:</p>
-        <input type="checkbox" name="food" value="dry"/> Сухой корм <br/>
-        <input type="checkbox" name="food" value="wet"/> Влажный корм <br/>
-        <input type="checkbox" name="food" value="natural"/> Натуральный корм
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="userName">Ваше имя*:</label>
+                    <input required type="text" class="form-control" name="userName" id="userName">
+                </div>
 
-        <p>Укажите пол питомца:</p>
-        <input type="radio" name="sex" value="male"/> Самец <br/>
-        <input type="radio" name="sex" value="female"/> Самка
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="userName">Ваш Email*:</label>
+                    <input required type="email" class="form-control" name="userEmail" id="userEmail">
+                    <div id="emailHelp" class="form-text help">Ваш email должен содержать @</div>
+                </div>
 
-        <p>Оставьте комментарий:</p>
-        <textarea rows="5" cols="25">Вы можете указать дополнительную информацию здесь&#9998;</textarea>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="phone">Контактный номер телефона*:</label>
+                    <input required type="tel" class="form-control" name="phone" id="phone" placeholder="+7xxxxxxxxxx"
+                        pattern="\+7[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" minlength="12" maxlength="12">
+                    <div id="phoneHelp" class="form-text help">Укажите номер телефона в формате +7xxxxxxxxxx</div>
+                </div>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="catName">Кличка Вашего питомца*:</label>
+                    <input required type="text" class="form-control" name="catsname" id="catName">
+                </div>
 
-        <p>&#128386;Загрузите фотографию питомца:</p>
-        <input type="file"/> <br/>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="catAge">Возраст Вашего питомца*:</label>
+                    <input required type="number" class="form-control" name="catAge" id="catAge" min="1" max="25">
+                </div>
+            </fieldset>
 
-        <button type="button">Сохранить</button>
-    </form>
+            <fieldset>
+                <legend>Выберите породу питомца:</legend>
+                <select class="form-select form-select-md">
+                    <option selected>Не выбрано</option>
+                    <option value="multibred">Дворняга</option>
+                    <option value="siamese">Сиамская</option>
+                    <option value="scottish">Шотландская вислоухая</option>
+                    <option value="brittish">Британская короткошерстная</option>
+                    <option value="persian">Персидская</option>
+                    <option value="other">Другое</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Укажите, чем питается Ваш питомец:</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="food" value="dry" id="dryFood">
+                    <label class="form-check-label" for="dryFood">
+                        Сухой корм
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="food" value="wet" id="wetFood">
+                    <label class="form-check-label" for="wetFood">
+                        Влажный корм
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="food" value="natural" id="naturalFood">
+                    <label class="form-check-label" for="naturalFood">
+                        Натуральный корм
+                    </label>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Укажите пол питомца:</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sex" value="male" id="maleSex">
+                    <label class="form-check-label" for="maleSex">
+                        Самец
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sex" value="female" id="femaleSex">
+                    <label class="form-check-label" for="femaleSex">
+                        Самка
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Оставьте комментарий:</legend>
+                <textarea class="form-control"
+                    placeholder="Вы можете указать дополнительную информацию здесь&#9998;"></textarea>
+            </fieldset>
+
+            <div class="mb-3">
+                <legend>Загрузите фотографию питомца:</legend>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+
+            <div>* - обязательные поля</div>
+
+            <button type="submit" class="btn btn-primary btn-lg main__button">Сохранить</button>
+        </form>
+    </main>
 </body>
 
 </html>

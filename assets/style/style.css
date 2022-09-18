@@ -1,0 +1,24 @@
+/* * {
+    border: 1px slateblue solid;
+} */
+
+.main__form {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #A9A9A9;
+
+    background-color: #F5F5F5;
+}
+
+.help {
+    width: 100%;
+    padding-left: 15px;
+}
+
+.main__button {
+    margin-top: 10px;
+}
