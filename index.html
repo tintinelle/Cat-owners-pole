@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котоопрос</title>
+    <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/1446/PNG/512/22264pawprints_98821.png" type="png">
+</head>
+
+<body>
+    <h1>Анкета для владельцев кошек</h1>
+    <form action="#" method="#">
+        <fieldset>
+            <legend><b>Основная информация</b></legend>
+            <p> 
+                <label for="cname">Кличка Вашего питомца:</label>
+                <input type="text" name="catsname" id="cname"/> 
+            </p>
+            <p> 
+                <label for="yname">Ваше имя:</label>
+                <input type="text" name="yourname" id="yname"/> 
+            </p>
+            <p> 
+                <label for="phone">Контактный номер телефона:</label>
+                <input type="text" name="contacts" id="phone"/> 
+            </p>
+        </fieldset>
+        <p> <label for="bred">Выберите породу питомца:</labe>
+        </p>
+        <select multiple id="bred">
+            <option value="multibred">Дворняга</option>
+            <option value="siamese">Сиамская</option>
+            <option value="scottish">Шотландская вислоухая</option>
+            <option value="brittish">Британская короткошерстная</option>
+            <option value="persian">Персидская</option>
+            <option value="other" selected="selected">Другое</option>
+        </select>
+
+        <p>Укажите, чем питается Ваш питомец:</p>
+        <input type="checkbox" name="food" value="dry"/> Сухой корм <br/>
+        <input type="checkbox" name="food" value="wet"/> Влажный корм <br/>
+        <input type="checkbox" name="food" value="natural"/> Натуральный корм
+
+        <p>Укажите пол питомца:</p>
+        <input type="radio" name="sex" value="male"/> Самец <br/>
+        <input type="radio" name="sex" value="female"/> Самка
+
+        <p>Оставьте комментарий:</p>
+        <textarea rows="5" cols="25">Вы можете указать дополнительную информацию здесь&#9998;</textarea>
+
+        <p>&#128386;Загрузите фотографию питомца:</p>
+        <input type="file"/> <br/>
+
+        <button type="button">Сохранить</button>
+    </form>
+</body>
+
+</html>
