@@ -14,25 +14,25 @@
 
 <body>
     <main class="main">
-        <form action="#" method="#" class="main__form">
+        <form action="#" method="#" class="main__form" onsubmit="return false">
             <h1>Анкета для владельцев кошек</h1>
             <fieldset>
                 <legend>Основная информация</legend>
 
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="userName">Ваше имя*:</label>
-                    <input required type="text" class="form-control" name="userName" id="userName">
+                    <input type="text" class="form-control" name="userName" id="userName">
                 </div>
 
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="userName">Ваш Email*:</label>
-                    <input required type="email" class="form-control" name="userEmail" id="userEmail">
+                    <input type="email" class="form-control" name="userEmail" id="userEmail">
                     <div id="emailHelp" class="form-text help">Ваш email должен содержать @</div>
                 </div>
 
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="phone">Контактный номер телефона*:</label>
-                    <input required type="tel" class="form-control" name="phone" id="phone" placeholder="+7xxxxxxxxxx"
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="+7xxxxxxxxxx"
                         pattern="\+7[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" minlength="12" maxlength="12">
                     <div id="phoneHelp" class="form-text help">Укажите номер телефона в формате +7xxxxxxxxxx</div>
                 </div>
@@ -49,11 +49,11 @@
 
             <fieldset>
                 <legend>Выберите породу питомца:</legend>
-                <select class="form-select form-select-md">
+                <select class="form-select form-select-md" id="catBreed">
                     <option selected>Не выбрано</option>
-                    <option value="multibred">Дворняга</option>
+                    <option value="not_pedigree">Дворняга</option>
                     <option value="siamese">Сиамская</option>
-                    <option value="scottish">Шотландская вислоухая</option>
+                    <option value="scottish_fold">Шотландская вислоухая</option>
                     <option value="brittish">Британская короткошерстная</option>
                     <option value="persian">Персидская</option>
                     <option value="other">Другое</option>
@@ -88,14 +88,14 @@
             <fieldset>
                 <legend>Укажите пол питомца:</legend>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sex" value="male" id="maleSex">
+                    <input class="form-check-input sex" type="radio" name="sex" value="male" id="maleSex">
                     <label class="form-check-label" for="maleSex">
                         Самец
                     </label>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sex" value="female" id="femaleSex">
+                    <input class="form-check-input sex" type="radio" name="sex" value="female" id="femaleSex">
                     <label class="form-check-label" for="femaleSex">
                         Самка
                     </label>
@@ -115,9 +115,11 @@
 
             <div>* - обязательные поля</div>
 
-            <button type="submit" class="btn btn-primary btn-lg main__button">Сохранить</button>
+            <button type="submit" class="btn btn-primary btn-lg main__button" id="buttonSave">Сохранить</button>
         </form>
     </main>
+
+    <script src="assets/script/index.js"></script>
 </body>
 
 </html>
