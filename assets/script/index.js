@@ -6,7 +6,7 @@ buttonSave.addEventListener('click', (event) => {
     // предотвращаем перезагрузку страницы
     event.preventDefault();
 
-    const form = document.getElementById('form');
+    // const form = document.getElementById('form');
 
     fetch("https://httpbin.org/post", {
             method: 'POST',
